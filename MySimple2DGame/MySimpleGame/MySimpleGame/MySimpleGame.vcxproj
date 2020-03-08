@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{9DDE85B5-D4D5-4D08-9615-B18BBB67748C}</ProjectGuid>
+    <RootNamespace>MySimpleGame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Libraries\glm\include;$(SolutionDir)\..\Libraries\lua-5.3.5_Win32_dllw6_lib\include;$(SolutionDir)\..\Libraries\SDL2-devel-2.0.10-VC\SDL2-2.0.10\include;$(SolutionDir)\..\Libraries\SDL2_mixer-devel-2.0.4-VC\SDL2_mixer-2.0.4\include;$(SolutionDir)\..\Libraries\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\..\Libraries\SDL2_image-devel-2.0.5-VC\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\Libraries\lua-5.3.5_Win32_dllw6_lib;$(SolutionDir)\..\Libraries\SDL2_mixer-devel-2.0.4-VC\SDL2_mixer-2.0.4\lib\x86;$(SolutionDir)\..\Libraries\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x86;$(SolutionDir)\..\Libraries\SDL2_image-devel-2.0.5-VC\SDL2_image-2.0.5\lib\x86;$(SolutionDir)\..\Libraries\SDL2-devel-2.0.10-VC\SDL2-2.0.10\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_mixer.lib;SDL2_ttf.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Libraries\glm\include;$(SolutionDir)\..\Libraries\lua-5.3.5_Win32_dllw6_lib\include;$(SolutionDir)\..\Libraries\SDL2-devel-2.0.10-VC\SDL2-2.0.10\include;$(SolutionDir)\..\Libraries\SDL2_mixer-devel-2.0.4-VC\SDL2_mixer-2.0.4\include;$(SolutionDir)\..\Libraries\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;$(SolutionDir)\..\Libraries\SDL2_image-devel-2.0.5-VC\SDL2_image-2.0.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\Libraries\lua-5.3.5_Win32_dllw6_lib;$(SolutionDir)\..\Libraries\SDL2_mixer-devel-2.0.4-VC\SDL2_mixer-2.0.4\lib\x86;$(SolutionDir)\..\Libraries\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x86;$(SolutionDir)\..\Libraries\SDL2_image-devel-2.0.5-VC\SDL2_image-2.0.5\lib\x86;$(SolutionDir)\..\Libraries\SDL2-devel-2.0.10-VC\SDL2-2.0.10\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_mixer.lib;SDL2_ttf.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Components\ColliderComponent.cpp" />
+    <ClCompile Include="Components\KeyboardControlComponent.cpp" />
+    <ClCompile Include="Components\ProjectileEmitterComponent.cpp" />
+    <ClCompile Include="Components\SpriteComponent.cpp" />
+    <ClCompile Include="Components\TextLabelComponent.cpp" />
+    <ClCompile Include="Components\TileComponent.cpp" />
+    <ClCompile Include="Components\TransformComponent.cpp" />
+    <ClCompile Include="Components\TweeningComponent.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TweenFuncs.cpp" />
+    <ClCompile Include="TweenObj.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Components\ColliderComponent.h" />
+    <ClInclude Include="Components\KeyboardControlComponent.h" />
+    <ClInclude Include="Components\ProjectileEmitterComponent.h" />
+    <ClInclude Include="Components\SpriteComponent.h" />
+    <ClInclude Include="Components\TextLabelComponent.h" />
+    <ClInclude Include="Components\TileComponent.h" />
+    <ClInclude Include="Components\TransformComponent.h" />
+    <ClInclude Include="Components\TweeningComponent.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="myHelperFuncs.h" />
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TweenFuncs.h" />
+    <ClInclude Include="TweenObj.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\.DS_Store" />
+    <None Include="assets\scripts\Level1.lua" />
+    <None Include="assets\tilemaps\jungle.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\images\army-group-1.png" />
+    <Image Include="assets\images\army-group-2.png" />
+    <Image Include="assets\images\army-group-3.png" />
+    <Image Include="assets\images\bandit-spritesheet.png" />
+    <Image Include="assets\images\bullet-enemy.png" />
+    <Image Include="assets\images\bullet-friendly.png" />
+    <Image Include="assets\images\chopper-sinngle.png" />
+    <Image Include="assets\images\chopper-spritesheet.png" />
+    <Image Include="assets\images\collision-texture.png" />
+    <Image Include="assets\images\heliport.png" />
+    <Image Include="assets\images\HelpScreenLevel1Jungle.png" />
+    <Image Include="assets\images\HelpScreenLevel2Desert.png" />
+    <Image Include="assets\images\obstacles.png" />
+    <Image Include="assets\images\radar.png" />
+    <Image Include="assets\images\rock-big-1.png" />
+    <Image Include="assets\images\rock-big-2.png" />
+    <Image Include="assets\images\rock-big-3.png" />
+    <Image Include="assets\images\rock-big-4.png" />
+    <Image Include="assets\images\rock-small-1.png" />
+    <Image Include="assets\images\SecondLevelHelpScreen.png" />
+    <Image Include="assets\images\start.png" />
+    <Image Include="assets\images\tank-big-down.png" />
+    <Image Include="assets\images\tank-big-left.png" />
+    <Image Include="assets\images\tank-big-right.png" />
+    <Image Include="assets\images\tank-small-left.png" />
+    <Image Include="assets\images\tank-small-right.png" />
+    <Image Include="assets\images\tree-small-1.png" />
+    <Image Include="assets\images\tree-small-2.png" />
+    <Image Include="assets\images\tree-small-3.png" />
+    <Image Include="assets\images\tree-small-4.png" />
+    <Image Include="assets\images\tree-small-5.png" />
+    <Image Include="assets\images\tree-small-6.png" />
+    <Image Include="assets\images\tree-small-7.png" />
+    <Image Include="assets\images\tree-small-8.png" />
+    <Image Include="assets\images\truck-down.png" />
+    <Image Include="assets\images\truck-left.png" />
+    <Image Include="assets\images\truck-right.png" />
+    <Image Include="assets\tilemaps\jungle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\helicopter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\arial.ttf" />
+    <Font Include="assets\fonts\charriot.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

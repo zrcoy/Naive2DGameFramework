@@ -1,0 +1,26 @@
+﻿  Animation.cpp
+  AssetManager.cpp
+  Collision.cpp
+  Component.cpp
+  ColliderComponent.cpp
+  KeyboardControlComponent.cpp
+  ProjectileEmitterComponent.cpp
+  SpriteComponent.cpp
+  TextLabelComponent.cpp
+  TileComponent.cpp
+  TransformComponent.cpp
+  TweeningComponent.cpp
+  Entity.cpp
+  EntityManager.cpp
+  FontManager.cpp
+  Game.cpp
+  main.cpp
+  Map.cpp
+  PCH.cpp
+  TextureManager.cpp
+  Generating Code...
+  Compiling...
+  TweenFuncs.cpp
+  TweenObj.cpp
+  Generating Code...
+  MySimpleGame.vcxproj -> D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\Debug\MySimpleGame.exe

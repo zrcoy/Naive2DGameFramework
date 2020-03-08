@@ -1,0 +1,44 @@
+﻿  AssetManager.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\AssetManager.h(5,10): fatal error C1083: Cannot open include file: 'SDL_ttf.h': No such file or directory
+  Collision.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Collision.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Component.cpp
+  ColliderComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  KeyboardControlComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  ProjectileEmitterComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  SpriteComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  TextLabelComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Components\TextLabelComponent.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  TileComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  TransformComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  TweeningComponent.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  Entity.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Constants.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  EntityManager.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Constants.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  FontManager.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\FontManager.h(3,10): fatal error C1083: Cannot open include file: 'SDL_ttf.h': No such file or directory
+  Game.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  main.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Constants.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Map.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  PCH.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  TextureManager.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  TweenFuncs.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\PCH.h(2,10): fatal error C1083: Cannot open include file: 'glm.hpp': No such file or directory
+  Generating Code...
+  Compiling...
+  TweenObj.cpp
+D:\Game Development\MyProjects\MySimple2DGame\MySimpleGame\MySimpleGame\Components\SpriteComponent.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Generating Code...
