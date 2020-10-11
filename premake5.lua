@@ -50,7 +50,7 @@ project "Tiny2DGameEngine"
 	
 	postbuildcommands
 	{
-		("{COPY} %{wks.location}/Libraries/lua-5.3.5_Win32_dllw6_lib/lua53.dll %{wks.location}/bin/" .. outputdir .."/%{prj.name}"),
+		("{COPY} %{wks.location}/Libraries/lua-5.3.5_Win32_dllw6_lib/lua53.dll ../bin/" .. outputdir .."/%{prj.name}"),
 		("{COPY} %{wks.location}/Libraries/SDL2_image-devel-2.0.5-VC/SDL2_image-2.0.5/lib/x86/SDL2_image.dll ../bin/" .. outputdir .."/%{prj.name}"),
 		("{COPY} %{wks.location}/Libraries/SDL2_image-devel-2.0.5-VC/SDL2_image-2.0.5/lib/x86/libjpeg-9.dll ../bin/" .. outputdir .."/%{prj.name}"),
 		("{COPY} %{wks.location}/Libraries/SDL2_image-devel-2.0.5-VC/SDL2_image-2.0.5/lib/x86/libpng16-16.dll ../bin/" .. outputdir .."/%{prj.name}"),
