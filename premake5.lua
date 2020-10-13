@@ -5,6 +5,12 @@ workspace "Tiny2DGameEngine"
 
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+premake.override(premake.tools.msc, "getLibraryExtensions", function(oldfn)
+  local extensions = oldfn()
+  extensions["a"] = true
+  return extensions
+end)
+
 project "Tiny2DGameEngine"
 	location "Tiny2DGameEngine"
 	kind "ConsoleApp"
@@ -45,7 +51,8 @@ project "Tiny2DGameEngine"
 		"SDL2_ttf",
 		"SDL2_image",
 		"SDL2",
-		"SDL2main"
+		"SDL2main",
+		"liblua53.a"
 	}
 	
 	postbuildcommands

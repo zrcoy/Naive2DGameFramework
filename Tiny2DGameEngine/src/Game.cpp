@@ -12,18 +12,12 @@
 #include "Components/TweeningComponent.h"
 #include "EntityManager.h"
 
-
 extern "C"
 {
 #include "lua.h"
 #include "lauxlib.h"
 #include "lualib.h"
 }
-
-#ifdef _WIN32
-#pragma comment(lib,"../Libraries/lua-5.3.5_Win32_dllw6_lib/liblua53.a")
-#endif
-
 
 EntityManager* Game::manager = new EntityManager();
 SDL_Renderer* Game::renderer;
@@ -57,7 +51,6 @@ Game::Game() {
 
     system("pause");
     lua_close(L);*/
-
 }
 
 Game::~Game() {
@@ -67,11 +60,7 @@ bool Game::IsRunning() const {
     return this->isRunning;
 }
 
-
-
 void Game::Initialize(int width, int height) {
-
-
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         std::cerr << "Error initializing SDL." << std::endl;
         return;
@@ -163,8 +152,6 @@ void Game::Destroy() {
     SDL_Quit();
 }
 
-
-
 //Entity& player = manager.AddEntity("chopper", PLAYER_LAYER, CollisionMask::PLAYER);
 void Game::LoadLevel(int levelNumber)
 {
@@ -180,7 +167,6 @@ void Game::LoadLevel(int levelNumber)
 
     //map = new Map("jungle-tiletexture", 2, 32);
     //map->LoadMap("assets/tilemaps/jungle.map", 25, 20);
-
 
     ////add entities
     ////tank
@@ -202,7 +188,6 @@ void Game::LoadLevel(int levelNumber)
     //player->AddComponent<KeyboardControlComponent>("up", "right", "down", "left", "space");
     //player->AddComponent<ColliderComponent>("player", 240, 106, 32, 32, true);
 
-
     ////radar
     //Entity& radarEntity = manager->AddEntity("Radar", UI_LAYER, CollisionMask::UI_ELEMENT);
     //radarEntity.AddComponent<TransformComponent>(720, 15, 0, 0, 64, 64, 1);
@@ -213,7 +198,6 @@ void Game::LoadLevel(int levelNumber)
     //heliportEntity.AddComponent<TransformComponent>(470, 420, 0, 0, 32, 32, 1);
     //heliportEntity.AddComponent<SpriteComponent>("heliport_image");
     //heliportEntity.AddComponent<ColliderComponent>("level_complete", 470, 420, 32, 32, true);
-
 
     ////label
     //Entity& labelLevelName = manager->AddEntity("LabelLevelName", UI_LAYER, CollisionMask::UI_ELEMENT);
@@ -251,7 +235,6 @@ void Game::LoadLevel(int levelNumber)
             if (assetType.compare("texture") == 0)
             {
                 assetManager->AddTexture(assetId, assetFilePath.c_str());
-
             }
             if (assetType.compare("font") == 0)
             {
@@ -261,7 +244,6 @@ void Game::LoadLevel(int levelNumber)
         assetIndex++;
     }
 
-
     /**********************************/
     /* Load map from lua config file  */
     /**********************************/
@@ -270,8 +252,6 @@ void Game::LoadLevel(int levelNumber)
     std::string mapFile = map_Sol["file"];
     map = new Map(mapId, static_cast<int>(map_Sol["scale"]), static_cast<int>(map_Sol["tileSize"]));
     map->LoadMap(mapFile, static_cast<int>(map_Sol["mapSizeX"]), static_cast<int>(map_Sol["mapSizeY"]));
-
-
 
     /***************************************/
     /* Load entities from lua config file  */
@@ -295,7 +275,6 @@ void Game::LoadLevel(int levelNumber)
             CollisionMask mask = static_cast<CollisionMask>(static_cast<int>(entity["mask"]));
             Entity& newEntity = manager->AddEntity(name, layer, mask);
 
-
             // add transform component
             sol::optional<sol::table> existTransformCompNode = entity["components"]["transform"];
             if (existTransformCompNode != sol::nullopt)
@@ -310,7 +289,6 @@ void Game::LoadLevel(int levelNumber)
                     static_cast<int>(entity["components"]["transform"]["scale"])
                     );
             }
-
 
             // add transform component
 
@@ -337,7 +315,6 @@ void Game::LoadLevel(int levelNumber)
                 }
             }
 
-
             // add keyboard component
             sol::optional<sol::table> existKeyboardCompNode = entity["components"]["input"]["keyboard"];
             if (existKeyboardCompNode != sol::nullopt)
@@ -349,7 +326,6 @@ void Game::LoadLevel(int levelNumber)
                     entity["components"]["input"]["keyboard"]["left"],
                     entity["components"]["input"]["keyboard"]["shoot"]
                     );
-
             }
 
             //add collider component
@@ -365,7 +341,6 @@ void Game::LoadLevel(int levelNumber)
                     static_cast<bool>(entity["components"]["collider"]["turnOn"])
                     );
             }
-
 
             //add projectile
             sol::optional<sol::table> existProjectileNode = entity["components"]["projectileEmitter"];
@@ -411,7 +386,6 @@ void Game::LoadLevel(int levelNumber)
                     );
             }
 
-
             // add text labels
             sol::optional<sol::table> existTextLabelNode = entity["components"]["textLabel"];
             if (existTextLabelNode != sol::nullopt)
@@ -438,7 +412,6 @@ void Game::LoadLevel(int levelNumber)
                     );
             }
 
-
             // add tweening components
             sol::optional<sol::table> existTweenNode = entity["components"]["tween"];
             if (existTweenNode != sol::nullopt)
@@ -450,7 +423,7 @@ void Game::LoadLevel(int levelNumber)
                     sol::optional<sol::table> existTweenObjNode = entity["components"]["tween"][index];
                     if (existTweenObjNode == sol::nullopt)
                         break;
-                    else 
+                    else
                     {
                         tweenComp.AddTweenObj(
                             entity["components"]["tween"][index]["func"],
@@ -461,11 +434,7 @@ void Game::LoadLevel(int levelNumber)
                     }
                     index++;
                 }
-               
-
             }
-
-
         }//end of else statement
         entitiesIndex++;
     }// end of while loop
@@ -490,9 +459,7 @@ void Game::HandleCameraMovement()
         camera.x = camera.x > camera.w ? camera.w : camera.x;
         camera.y = camera.y > camera.h ? camera.h : camera.y;
     }
-
 }
-
 
 void Game::CheckCollisions()
 {
@@ -506,7 +473,6 @@ void Game::CheckCollisions()
     {
         manager->GetEntityByName("player")->GetComponent<TweeningComponent>()->TriggerTweenObjByTarget("width");
         manager->GetEntityByName("player")->GetComponent<TweeningComponent>()->TriggerTweenObjByTarget("height");
-        
     }
     if (collisionType == PLAYER_LEVEL_COMPLETE_COLLISION)
     {
@@ -530,5 +496,3 @@ void Game::ProcessingNextLevel()
     std::cout << "Next Level!" << std::endl;
     isRunning = false;
 }
-
-

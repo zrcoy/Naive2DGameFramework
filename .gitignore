@@ -1,0 +1,9 @@
+# Output folders
+/bin
+/bin-int
+
+# Solution and project files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
